@@ -1,0 +1,24 @@
+{
+  "name": "calc-maths",
+  "version": "1.0.0",
+  "description": "calc simple calculator to upload npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mavarona/calc-maths.git"
+  },
+  "keywords": [
+    "maths",
+    "sum",
+    "multiply"
+  ],
+  "author": "mavlmac",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mavarona/calc-maths/issues"
+  },
+  "homepage": "https://github.com/mavarona/calc-maths#readme"
+}
