@@ -7,7 +7,7 @@ module.exports = {
      * @param {*} n2 second operator of the sum
      */
     sum: function(n1, n2) {
-        return n1 + n2;
+        return (this.areNumbers(n1, n2) ? n1 + n2 : this.messageError());
     },
     /**
      * The substract of two operators
@@ -17,7 +17,7 @@ module.exports = {
      * @param {*} n2 second operator of the substraction
      */
     substract: function(n1, n2) {
-        return n1 - n2;
+        return (this.areNumbers(n1, n2) ? n1 - n2 : this.messageError());
     },
     /**
      * The multiply of two operators
@@ -27,7 +27,7 @@ module.exports = {
      * @param {*} n2 second operator of the multiplication
      */
     multiply: function(n1, n2) {
-        return n1 * n2;
+        return (this.areNumbers(n1, n2) ? n1 * n2 : this.messageError());
     },
     /**
      * The divide of two operators
@@ -37,6 +37,23 @@ module.exports = {
      * @param {*} n2 second operator of the division (divider)
      */
     divide: function(n1, n2) {
-        return n1 / n2;
+        return (this.areNumbers(n1, n2) ? n1 / n2 : this.messageError());
+    },
+    /**
+     * Return message of error indicates that the two operators must be numbers
+     */
+    messageError: function() {
+        console.log('The two operators must be numbers');
+    },
+    /**
+     * Check if the two operators are numbers
+     * @param {*} n1 first operator 
+     * @param {*} n2 second operator
+     */
+    areNumbers: function(n1, n2) {
+        if (typeof n1 !== 'number' || typeof n2 !== 'number') {
+            return false;
+        }
+        return true;
     }
 }
